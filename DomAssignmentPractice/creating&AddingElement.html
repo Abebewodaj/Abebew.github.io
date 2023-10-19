@@ -1,0 +1,41 @@
+<!-- 4. Create and add Div,p,img,link, textInput,textArea,button,checkbox,radio,label -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let divElement = document.createElement("div");
+      divElement.innerHTML = "this is new div cretaed ";
+      document.body.appendChild(divElement);
+
+      //  create p and add
+      let pElement = document.createElement("p");
+      pElement.innerHTML = "this is new paragraph cretaed ";
+      //  divElement.before(pElement);
+      divElement.after(pElement);
+
+      //  create textinput and add
+      let textInput = document.createElement("input");
+      textInput.value = "test value ";
+      //  divElement.before(pElement);
+      pElement.after(textInput);
+
+      //  create button and add
+
+      let buttonElement = document.createElement("button");
+      buttonElement.innerHTML = "click me! ";
+      pElement.after(buttonElement);
+
+      //  create checkboc and add
+
+      let checkboxElement = document.createElement("input");
+      checkboxElement.type = "checkbox";
+      buttonElement.after(checkboxElement);
+    </script>
+  </body>
+</html>

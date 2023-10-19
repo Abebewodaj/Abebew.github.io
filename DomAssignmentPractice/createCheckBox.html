@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Manipulation</title>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script>
+        // Create and add a <div> element
+        const divElement = document.createElement("div");
+        divElement.textContent = "This is a div";
+        document.getElementById("container").appendChild(divElement);
+
+        // Create and add a <p> element
+        const pElement = document.createElement("p");
+        pElement.textContent = "This is a paragraph";
+        document.getElementById("container").appendChild(pElement);
+
+        // Create and add an <img> element
+        const imgElement = document.createElement("img");
+        imgElement.src = "rose2.text";
+        document.getElementById("container").appendChild(imgElement);
+
+        // Create and add an <a> (link) element
+        const linkElement = document.createElement("a");
+        linkElement.href = "https://example.com";
+        linkElement.textContent = "Visit Example.com";
+        document.getElementById("container").appendChild(linkElement);
+
+        // Create and add a <input> (textInput) element
+        const inputElement = document.createElement("input");
+        inputElement.type = "text";
+        document.getElementById("container").appendChild(inputElement);
+
+        // Create and add a <textarea> element
+        const textareaElement = document.createElement("textarea");
+        textareaElement.rows = 4;
+        textareaElement.cols = 50;
+        document.getElementById("container").appendChild(textareaElement);
+
+        // Create and add a <button> element
+        const buttonElement = document.createElement("button");
+        buttonElement.textContent = "Click me";
+        document.getElementById("container").appendChild(buttonElement);
+
+        // Create and add a <label> element
+        const labelElement = document.createElement("label");
+        labelElement.textContent = "This is a label";
+        document.getElementById("container").appendChild(labelElement);
+
+        // Create and add a <input> (checkbox) element
+        const checkboxElement = document.createElement("input");
+        checkboxElement.type = "checkbox";
+        document.getElementById("container").appendChild(checkboxElement);
+
+        // Create and add a <input> (radio) element
+        const radioElement = document.createElement("input");
+        radioElement.type = "radio";
+        document.getElementById("container").appendChild(radioElement);
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="content">
+    <label id="label">Fruit lists:</label>
+
+  </div>
+  <script>
+  let ul = document.createElement("ul");
+    let li = document.createElement('li')
+    li.textContent = 'Banana';
+    ul.appendChild(li);
+    let li1 = document.createElement("li");
+    li1.textContent = 'Apple';
+    ul.appendChild(li1);
+    let li3 = document.createElement("li");
+    li3.textContent = 'Grapes';
+    ul.appendChild(li3);
+
+
+    let label=document.getElementById('label');
+    label.after(ul);
+
+    // document.getElementById("content").appendChild(ul);
+
+    </script>
+  
+</body>
+</html>

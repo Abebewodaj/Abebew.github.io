@@ -1,0 +1,47 @@
+
+<!-- 1. Change Text of Div,P,textInput,link -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+ <script>
+  function divChange(){
+  //   let divElement =document.getElementById('div1');
+  // divElement.textContent = '"<p>New HTML content</p>"; '
+  // console.log(divElement.innerHTML);
+  // document.getElementById('div1').innerHTML ="<p>New HTML content</p>";
+  // console.log(document.getElementById('div1').innerHTML);
+  // let divElement =document.getElementById('img1');
+  // divElement.src = 'rose2.text';
+  // divElement.alt = 'new image';
+     let divElement =document.getElementById('anch');
+     divElement.href ="https://www3schools.com/";
+    // let divElement =document.getElementById('input');
+    //  divElement.value ="new value";
+    //  let divElements =document.getElementById('inputt');
+    //  divElement.value ="value changed textarea";
+
+  }
+  
+
+
+ </script>
+
+
+</head>
+<body>
+      <textarea id="inputt">dfawef </textarea> 
+      <!-- <input type="text" id="input" value="some value"/> -->
+     <a href="https://www.google.com//" id="anch">link to google</a>
+    <img src="flowers.text" id="img1" alt="old image"/>
+   <div id="div1">This div elements with some text content</div>
+   <button id="btn" onclick="divChange()">display Change</button>
+
+
+
+
+</body>
+</html>

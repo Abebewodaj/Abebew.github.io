@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <label>First number:</label> 
+  <input type="number" id="num1" /> <br>
+  <label>Second number:</label>
+  <input type="number" id="num2" /> <br>
+  <textarea id="num3" ></textarea>
+  <input type="button" value="Sum" id="sm" onclick="adding()" />
+
+  <script>
+    function adding() {
+      let A = parseFloat(document.getElementById('num1').value);
+      let B = parseFloat(document.getElementById('num2').value);
+      let C = A + B;    
+      document.getElementById('num3').innerHTML = "Sum is: " + C;
+      
+      
+      }
+  </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <p>Display</p>
+  <p id="para2">Bananas are yellow in color</p>
+  <button onclick="changeConditionally()">Submit</button>
+  <div>Visibilty</div>
+  <input type="text" id="input"/>
+  <button onclick="hiding()">Submit</button>
+
+    <script>
+   
+
+      function changeConditionally() {
+      let para2 = document.getElementById('para2');
+    
+      if (para2.style.display === 'none') {
+        para2.style.display = 'block'; // Show the element
+      } else {
+        para2.style.display = 'none'; // Hide the element
+      }
+    }
+   
+     function hiding(){
+      let inputV= document.getElementById('input');
+
+      if (inputV.style.display === 'none') {
+        inputV.style.display = 'block'; // Show the element
+      } else {
+        inputV.style.display = 'none'; // Hide the element
+      }
+
+     }
+
+
+    </script>
+
+
+
+
+
+
+</body>
+</html>

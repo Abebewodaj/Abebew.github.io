@@ -1,0 +1,46 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Entry App</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    
+
+    <textarea id="textEntry" placeholder="Enter text"></textarea>
+    <button onclick="submitText()">Append</button>
+    <button onclick="clearAll()">clearAll</button>
+    <div id="output">previous Entries:-</div>
+    <div id="previousEntries">pinneaples</div>
+
+    <script>
+        function submitText() {
+           let newInputText = document.getElementById("textEntry").value;
+
+          let previousEntries = document.getElementById("previousEntries").innerHTML;
+
+          let newText = previousEntries + " " + newInputText ;
+            document.getElementById("previousEntries").innerHTML = newText;
+        }
+
+        function clearAll() {
+    // document.getElementById("previousEntries").innerHTML = "";
+    
+   let inner = document.getElementById("previousEntries");
+    inner.innerHTML = "";
+}
+
+
+
+      
+
+   
+
+
+    </script>
+</body>
+</html>

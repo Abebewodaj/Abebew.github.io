@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clear Text on Submit</title>
+</head>
+<body>  
+            Enter text:
+    <input type="text" id="textInput" >
+    <button id="Clear" onclick="ClearTextInput()">Clear</button>
+
+    <script>
+               function ClearTextInput() {
+            const textInput = document.getElementById("textInput");
+        const submitButton = document.getElementById("Clear");
+            textInput.value = "";
+        }
+    </script>
+</body>
+</html>

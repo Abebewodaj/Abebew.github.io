@@ -1,0 +1,46 @@
+
+
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+      
+     <select id="optionValues">
+  <option>dark</option>
+  <option>light</option>
+
+     </select>
+   <p id="para">Bananas are yellow in color
+
+   </p>
+   <button onclick="colorChange()">Submit</button>
+     <script>
+    function colorChange(){
+    
+       let valueOfOption = document.getElementById('optionValues').value;
+        if(valueOfOption === 'dark'){
+        
+           document.getElementById('para').style.backgroundColor='black';
+           document.getElementById('para').style.color='white';
+
+
+        }  else{
+          document.getElementById('para').style.backgroundColor='yellow';
+          document.getElementById('para').style.color='red';
+
+        }
+
+
+    }
+
+
+
+     </script>
+
+  </body>
+  </html>

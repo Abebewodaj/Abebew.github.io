@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Manipulation Example</title>
+</head>
+<body>
+  <h1>DOM Manipulation Example</h1>
+
+  <div id="content">
+  </div>
+
+  <script>
+    let table = document.createElement("table");
+
+    let  headerRow = document.createElement("tr");
+
+    let th1 = document.createElement("th");
+    th1.textContent = "Header 1";
+    let th2 = document.createElement("th");
+    th2.textContent = "Header 2";
+    headerRow.appendChild(th1);
+    headerRow.appendChild(th2);
+
+    table.appendChild(headerRow);
+
+    
+      let row = document.createElement("tr");
+
+      let td1 = document.createElement("td");
+      td1.textContent = " data1";
+      let td2 = document.createElement("td");
+      td2.textContent = "data2";
+
+      row.appendChild(td1);
+      row.appendChild(td2);
+
+      table.appendChild(row);
+
+
+    document.getElementById("content").appendChild(table);
+
+    let ol = document.createElement("ol");
+
+       let li = document.createElement("li");
+      li.textContent = "apple";
+      ol.appendChild(li);
+    let li2 = document.createElement("li");
+      li2.textContent = "banana";
+      ol.appendChild(li2);
+      let li3 = document.createElement("li");
+      li3.textContent = "orange";
+      ol.appendChild(li3);
+
+    document.getElementById("content").appendChild(ol);
+
+     let ul = document.createElement('ul');
+     let li4 = document.createElement('li');
+     li4.textContent ='Java'
+     ul.appendChild(li4);
+
+     let li5 = document.createElement('li');
+     li5.textContent ='JS'
+     ul.appendChild(li5);
+
+
+    document.getElementById("content").appendChild(ul);
+  </script>
+</body>
+</html>

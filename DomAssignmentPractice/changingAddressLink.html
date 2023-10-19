@@ -1,0 +1,31 @@
+<!-- 3. change the address of link -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+   <script>
+    function linkChange(){
+      let linkChange =document.getElementById('anch');
+   linkChange.setAttribute("href","https://www.apple.com/");
+    //  linkChange.href = 'https://www.apple.com/'
+     linkChange.innerHTML = 'apple';
+ 
+    }
+     
+   </script>
+   <div></div>
+   <a href="https://www.google.com/" id="anch">google</a>
+   <button onclick="linkChange ()">change link</button>
+
+
+
+</body>
+</html>

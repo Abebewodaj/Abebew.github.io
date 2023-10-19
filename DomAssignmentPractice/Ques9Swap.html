@@ -1,0 +1,38 @@
+<!-- 
+
+9. Swap the text of two input text fields
+When User enters, ‘x’ in Name and ‘y’ in Alias.
+On click of submit, Name should show ‘y’ and Alias should show ‘x’ -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<input type="text" id="input1"/>
+<input type="text" id="input2"/>
+<button onclick="swap()">swap</button>
+
+<script>
+   function swap(){
+    let A =document.getElementById('input1');
+    let B =document.getElementById('input2');
+    let temp = A.value;
+  A.value = B.value;
+  B.value = temp;
+   }
+ 
+
+</script>
+
+
+
+</body>
+</html>
