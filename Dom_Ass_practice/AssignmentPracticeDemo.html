@@ -1,0 +1,239 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change TextArea Value</title>
+</head>
+<body> 
+    <!-- <textarea id="myTextarea">sddsdasdasd</textarea>
+    <button onclick="changeTextAreaValue()">Change Text</button>
+
+    <script>
+        function changeTextAreaValue() {
+            // Get the textarea element by its ID
+            var textarea = document.getElementById("myTextarea");
+
+            // Set the value of the textarea
+            textarea.value = "New text for the textarea";
+        }
+    </script>
+
+   <script>
+    function linkChange(){
+      let linkChange =document.getElementById('anch');
+   linkChange.setAttribute("href","https://www.apple.com/");
+    //  linkChange.href = 'https://www.apple.com/'
+     linkChange.innerHTML = 'apple';
+ 
+    }
+     
+   </script>
+   
+   <div></div>
+   <a href="https://www.google.com/" id="anch">google</a>
+   <button onclick="linkChange ()">change link</button>
+   <script>
+    // Create element:
+    const heading = document.createElement("h3");
+    heading.innerText = "This is a heading.";
+    
+    // Append to body:
+    document.body.append(heading);
+    document.after(heading);
+    
+    </script>
+   <div id="content">
+</div>
+
+<script>
+  let table = document.createElement("table");
+
+  let  headerRow = document.createElement("tr");
+
+  let th1 = document.createElement("th");
+  th1.textContent = "Header 1";
+  let th2 = document.createElement("th");
+  th2.textContent = "Header 2";
+  headerRow.appendChild(th1);
+  headerRow.appendChild(th2);
+
+  table.appendChild(headerRow);
+
+  
+    let row = document.createElement("tr");
+
+    let td1 = document.createElement("td");
+    td1.textContent = " data1";
+    let td2 = document.createElement("td");
+    td2.textContent = "data2";
+
+    row.appendChild(td1);
+    row.appendChild(td2);
+
+    table.appendChild(row);
+
+
+  document.getElementById("content").appendChild(table);
+
+  let ol = document.createElement("ol");
+
+     let li = document.createElement("li");
+    li.textContent = "apple";
+    ol.appendChild(li);
+  let li2 = document.createElement("li");
+    li2.textContent = "banana";
+    ol.appendChild(li2);
+    let li3 = document.createElement("li");
+    li3.textContent = "orange";
+    ol.appendChild(li3);
+
+  document.getElementById("content").appendChild(ol);
+
+   let ul = document.createElement('ul');
+   let li4 = document.createElement('li');
+   li4.textContent ='Java'
+   ul.appendChild(li4);
+
+   let li5 = document.createElement('li');
+   li5.textContent ='JS'
+   ul.appendChild(li5);
+
+
+  document.getElementById("content").appendChild(ul);
+</script> --> 
+
+
+<textarea id="inputt">dfawef </textarea> 
+<!-- <input type="text" id="input" value="some value"/> -->
+<a href="https://www.google.com//" id="anch">link to google</a>
+<img src="flowers.text" id="img1" alt="old image"/>
+<div id="div1">This div elements with some text content</div>
+<button id="btn" onclick="divChange()">display Change</button>
+<script>
+    function divChange(){
+    //   let divElement1 =document.getElementById('div1');
+    // divElement1.textContent = '"<p>New HTML content</p>"; '
+    // console.log(divElement.innerHTML);
+    // document.getElementById('div1').innerHTML ="<p>New HTML content</p>";
+    console.log(document.getElementById('div1').innerHTML);
+    let divElement2 =document.getElementById('img1');
+    divElement2.src = 'rose2.text';
+    divElement.alt = 'new image';
+    //    let anchElement =document.getElementById('anch');
+    //    anchElement.setAttribute('href','https://www.apple.com/');
+    //    anchElement.innerHTML ='link to Apple';
+    //   let divElement =document.getElementById('input');
+    //    divElement.value ="new value";
+    //    let divElements =document.getElementById('inputt');
+    //    divElement.value ="value changed textarea";
+  
+    }
+    
+  
+  
+   </script>
+  
+  
+
+  <textarea id="textEntry" placeholder="Enter text"></textarea>
+  <button onclick="submitText()">Append</button>
+  <button onclick="clearAll()">clearAll</button>
+  <div id="output">previous Entries:-</div>
+  <div id="previousEntries">pinneaples</div>
+
+  <script>
+      function submitText() {
+         let newInputText = document.getElementById("textEntry").value;
+
+        let previousEntries = document.getElementById("previousEntries").innerHTML;
+
+        let newText = previousEntries + " " + newInputText ;
+          document.getElementById("previousEntries").innerHTML = newText;
+      }
+
+      function clearAll() {
+  // document.getElementById("previousEntries").innerHTML = "";
+  
+ let inner = document.getElementById("previousEntries");
+  inner.innerHTML = "";
+}
+
+
+
+    
+
+ 
+
+
+  </script>
+     
+<input type="text" id="input1"/>
+<input type="text" id="input2"/>
+<button onclick="swap()">swap</button>
+
+<script>
+   function swap(){
+    let A =document.getElementById('input1');
+    let B =document.getElementById('input2');
+    let temp = A.value;
+  A.value = B.value;
+  B.value = temp;
+   }
+</script>
+
+
+Enter text:
+<input type="text" id="textInput" >
+<button id="Clear" onclick="ClearTextInput()">Clear</button>
+
+<script>
+           function ClearTextInput() {
+        const textInput = document.getElementById("textInput");
+    const submitButton = document.getElementById("Clear");
+        textInput.value = "";
+    }
+</script>
+<label>First number:</label> 
+<input type="number" id="num1" /> <br>
+<label>Second number:</label>
+<input type="number" id="num2" /> <br>
+<textarea id="num3" ></textarea>
+<input type="button" value="Sum" id="sm" onclick="adding()" />
+
+<script>
+  function adding() {
+    let A = parseFloat(document.getElementById('num1').value);
+    let B = parseFloat(document.getElementById('num2').value);
+    let C = A + B;    
+    document.getElementById('num3').innerHTML = "Sum is: " + C;
+    
+    
+    }
+</script>
+<div id="content">
+    <label id="label">Fruit lists:</label>
+
+  </div>
+  <script>
+  let ul = document.createElement("ul");
+    let li = document.createElement('li')
+    li.textContent = 'Banana';
+    ul.appendChild(li);
+    let li1 = document.createElement("li");
+    li1.textContent = 'Apple';
+    ul.appendChild(li1);
+    let li3 = document.createElement("li");
+    li3.textContent = 'Grapes';
+    ul.appendChild(li3);
+
+
+    let label=document.getElementById('label');
+    label.after(ul);
+
+    // document.getElementById("content").appendChild(ul);
+
+    </script>
+ </body>
+
+</html>

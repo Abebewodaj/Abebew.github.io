@@ -1,0 +1,129 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+   let label =document.createElement('label');
+   label.innerHTML ='Programming Languages:';
+   document.body.appendChild(label);
+
+   let select = document.createElement('select');
+     label.after(select)
+   let option1 = document.createElement('option');
+    option1.innerHTML ="Java";
+    let option2 = document.createElement('option');
+    option2.innerHTML="Phyton";
+    option2.setAttribute('selected','selected');
+    
+    let option3 = document.createElement('option');
+    option3.innerHTML="Javascripts";
+   
+    select.appendChild(option1);
+    select.appendChild(option2);
+    select.appendChild(option3);
+
+      //  part 2
+      let para =document.createElement('p');
+     para.innerHTML ='Gender';
+     document.body.appendChild(para);
+
+      let radio =document.createElement('input');
+      radio.type='radio';
+      radio.name ='Gender'
+      radio.value ='Male'
+
+      para.appendChild(radio)
+       
+      let label2 = document.createElement('label');
+      label2.innerHTML = 'Male';
+      para.appendChild(label2)
+      
+      let radio2 =document.createElement('input');
+      radio2.type='radio';
+      radio2.name ='Gender'
+      radio.value ='Female'
+
+      para.appendChild(radio2)
+       
+      let label3 = document.createElement('label');
+      label3.innerHTML = 'Female';
+      para.appendChild(label3)
+
+  </script>
+     
+     <select id="optionValues">
+      <option>dark</option>
+      <option>light</option>
+    
+         </select>
+       <p id="para">Bananas are yellow in color
+    
+       </p>
+       <button onclick="colorChange()">Submit</button>
+         <script>
+        function colorChange(){
+        
+           let valueOfOption = document.getElementById('optionValues').value;
+            if(valueOfOption === 'dark'){
+            
+               document.getElementById('para').style.backgroundColor='black';
+               document.getElementById('para').style.color='white';
+    
+    
+            }  else{
+              document.getElementById('para').style.backgroundColor='yellow';
+              document.getElementById('para').style.color='red';
+    
+            }
+    
+    
+        }
+    
+         </script>
+   
+  <p>Display</p>
+  <p id="para2">Bananas are yellow in color</p>
+  <button onclick="changeConditionally()">Submit</button>
+  <div>Visibilty</div>
+  <input type="text" id="input"/>
+  <button onclick="hiding()">Submit</button>
+
+    <script>
+   
+
+      function changeConditionally() {
+      let para2 = document.getElementById('para2');
+    
+      if (para2.style.display === 'none') {
+        para2.style.display = 'block'; // Show the element
+      } else {
+        para2.style.display = 'none'; // Hide the element
+      }
+    }
+   
+     function hiding(){
+      let inputV= document.getElementById('input');
+
+      if (inputV.style.display === 'none') {
+        inputV.style.display = 'block'; // Show the element
+      } else {
+        inputV.style.display = 'none'; // Hide the element
+      }
+
+     }
+
+
+    </script>
+
+
+
+</body>
+</html>
