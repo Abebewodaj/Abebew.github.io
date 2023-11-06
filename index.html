@@ -4,17 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Workflow</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .courses {
+      display: flex;
+      flex-direction: column;
+      font-weight: bolder;
+      font-size: 17px;
+      padding: 10px;
+      text-align: center;
+      height: 100%;
+      width: 100%;
+      background-color: purple;
+      align-items: center;
+    }
+    .courses ol {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
 </head>
 <body>
-  <p style="font-size:20px; color:blue;text-align: center;">My Courses List</p>
-  
-  <div style="display:flex; flex-direction:column; font-weight:bolder; font-size:17px; margin-bottom:20px; padding:10px; text-align:center; margin:10px; height:100%; width:100%; background-color:green;">
-    <ol style="display:flex;flex-direction:column;text-align:center">
-   <li><a href="sd405.html">WAP</a></li> 
-   <li><a href="sd415.html">OOP</a></li>
-  </ol>
-    </div>
-      
-       
+  <div class="courses">
+    <p style="font-size: 20px; color: blue;">My Courses List</p>
+    <ol>
+      <li><a href="sd405.html">WAP</a></li>
+      <li><a href="sd415.html">OOP</a></li>
+    </ol>
+  </div>
 </body>
 </html>
