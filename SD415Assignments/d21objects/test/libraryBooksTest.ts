@@ -1,7 +1,7 @@
 /* comment out the import assert line (in /dist/test js mocha file) when running in the browser */
-import { assert } from "chai"
+// import { assert } from "chai"
 
-import {Book, library, findTitles, findAuthors , findIDs, createBook} from "../src/book.js";  //import all of the app.js functions used in the Mocha tests
+import {library, findTitles, findAuthors , findIDs, createBook} from "../src/book.js";  //import all of the app.js functions used in the Mocha tests
 
 
 /*
@@ -26,18 +26,28 @@ describe("library", function () {
     const titles = ["Mockingjay: The Final Book of The Hunger Games", "The Road Ahead", "Walter Isaacson"];
     const authors = ["Bill Gates", "Steve Jobs", "Suzanne Collins"];
     const ids = [1254, 3245, 4264];
+  const libraryBooks = [
+    { title: "The Road Ahead", author: "Bill Gates", libraryID: 1254 },
+    { title: "Walter Isaacson", author: "Steve Jobs", libraryID: 4264 },
+    {
+      title: "Mockingjay: The Final Book of The Hunger Games",
+      author: "Suzanne Collins",
+      libraryID: 3245,
+    },
+  ];
+
 
 
     it("find titles", function () {
-        assert.deepEqual(findTitles(), titles);
+        assert.deepEqual(findTitles(libraryBooks), titles);
     });
 
     it("find authors", function () {
-        assert.deepEqual(findAuthors(), authors);
+        assert.deepEqual(findAuthors(libraryBooks), authors);
     });
 
     it("find ids", function () {
-        assert.deepEqual(findIDs(), ids);
+        assert.deepEqual(findIDs(libraryBooks), ids);
     });
 
     it("create book", function () {
@@ -46,15 +56,21 @@ describe("library", function () {
     });
 
     it("create book and save to library", function () {
-        //assumes createBook was called before this test--e.g., in prior it test
-        const TEST_LIB: Book[] = [
-            { title: "The Road Ahead", author: "Bill Gates", libraryID: 1254 },
-            { title: "Walter Isaacson", author: "Steve Jobs", libraryID: 4264 },
-            { title: "Mockingjay: The Final Book of The Hunger Games", author: "Suzanne Collins", libraryID: 3245 },
-            { title: "My New Book", author: "Me Too", libraryID: 1144 }
-        ];
-        assert.deepEqual(library, TEST_LIB);
+      //assumes createBook was called before this test--e.g., in prior it test
 
+      // Call createBook to add the new book to the library
+      createBook("My New Book", "Me Too", 1144);
+      const TEST_LIB= [
+        { title: "The Road Ahead", author: "Bill Gates", libraryID: 1254 },
+        { title: "Walter Isaacson", author: "Steve Jobs", libraryID: 4264 },
+        {
+          title: "Mockingjay: The Final Book of The Hunger Games",
+          author: "Suzanne Collins",
+          libraryID: 3245,
+        },
+        { title: "My New Book", author: "Me Too", libraryID: 1144 },
+      ];
+      assert.deepEqual(library, TEST_LIB);
     });
 
 });
