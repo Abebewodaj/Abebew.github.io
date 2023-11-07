@@ -52,3 +52,4 @@ export const triple = function(num:number):number{
 
 //arrow method
 export const tripleArrow = (num:number):number=>num*3;
+//
