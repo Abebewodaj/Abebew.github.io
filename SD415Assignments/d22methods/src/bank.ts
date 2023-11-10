@@ -28,7 +28,7 @@ interface Bank {
 export const bank: Bank = {
   transactionsDB: [],
 
-  saveTransaction(customerId: number, amount: number): void {
+  saveTransaction(customerId: number, amount: number): void { //1
     let found = false;
     for (const customer of this.transactionsDB) {
       if (customer.customerId === customerId) {
