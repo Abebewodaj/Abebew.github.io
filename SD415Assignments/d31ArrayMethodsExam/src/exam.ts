@@ -29,7 +29,7 @@ console.log(resultArray);
         //   const newArray = arr.slice();
         
         //   // Replace the first and last elements
-        //   newArray.splice(0, 1, startValue);
+        //   newArray.splice(0, 1, startValue);// 0
         //   newArray.splice(newArray.length - 1, 1, endValue);
 
         
