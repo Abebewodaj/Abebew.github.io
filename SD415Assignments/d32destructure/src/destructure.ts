@@ -39,6 +39,7 @@ export function topSalary(salaries: SalaryObj): string | null {
 const salaryData: SalaryObj = {
     John: 50000,
     Jane: 60000,
+    
     Bob: 55000,
 };
 
