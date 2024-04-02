@@ -1,0 +1,42 @@
+
+/* 1.Create a function using function declaration named sum with one parameter of Array type, 
+the returned result is the sum of all elements which are greater than 20.;*/
+
+function sum(arr) {
+  let sum = 0;
+
+  for (const elements of arr) {
+    if (elements > 20) {
+      sum += elements;
+    }
+  }
+  
+  return sum
+
+}
+
+  const test_array = [10, 15, 25, 25, 12, 30, 60, 21]; 
+  console.log(sum(test_array));
+
+
+// 2. Create a function using function expression named getNewArray with one parameter of String Array; // , return a new array which contains all string, length is greater than and equal to 5, and // contains letter ‚a’.
+
+const getNewArray = function (str_arr) {
+  const new_array = str_arr.filter(str => str.length >= 5 && str.includes('a'));
+  return new_array;
+};
+  const str_arr = ['testarray', 'byea', 'hello abebe'];
+  const result = getNewArray(str_arr);
+  console.log(result);
+
+  //3. Implement an arrow function with feature below:concat('hi', [1, 2, 3],
+  // ['Hello', 'world']) -> return result: ['h', 'i', 1, 2, 3, 'Hello', 'world'] 
+
+  const concat = (arr_1, arr_2, arr_3) => {
+
+    return [...arr_1, ...arr_2, ...arr_3];
+  
+  };
+
+  const result2 = concat('hi', [1, 2, 3], ['Hello', 'worldsssss']);
+  console.log(result2);
