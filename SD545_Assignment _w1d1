@@ -4,12 +4,17 @@ the returned result is the sum of all elements which are greater than 20.;*/
 
 function sum(arr) {
   let sum = 0;
-
-  for (const elements of arr) {
-    if (elements > 20) {
-      sum += elements;
-    }
-  }
+   //or 
+  
+  const result_Sum = arr.filter((item) => item > 20)
+    .reduce(((accum, current) => accum + current), 0);
+  return result_Sum;
+   
+  //for (const elements of arr) {
+    //if (elements > 20) {
+     // sum += elements;
+    //}
+  //}
   
   return sum
 
